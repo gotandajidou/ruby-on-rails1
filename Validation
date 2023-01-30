@@ -11,3 +11,18 @@ irb(main):006:0> e.save
 => true                                         
 irb(main):007:0> e.errors.full_messages
 => []
+irb(main):008:1* def index
+irb(main):009:1*   @events = Event.all
+irb(main):010:0> end
+=> :index
+irb(main):011:0> Event.all
+  Event Load (0.3ms)  SELECT "events".* FROM "events"
+=>                                                      
+[#<Event:0x0000000106865bd0                             
+  id: 1,
+  name: "ihower",
+  description: nil,
+  is_public: nil,
+  capacity: nil,
+  created_at: Mon, 30 Jan 2023 04:00:13.877171000 UTC +00:00,
+  updated_at: Mon, 30 Jan 2023 04:00:13.877171000 UTC +00:00>]
